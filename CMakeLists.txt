@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.9)
+project(cxedit)
+set(CMAKE_CXX_COMPILER clang++-6.0)
+set(CMAKE_CXX_STANDARD 17)
+# set(PROJECT_BINARY_DIR "../bin")
+# set(CMAKE_BINARY_DIR "./bin")
+set(EXECUTABLE_OUTPUT_PATH "./bin")
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(SOURCES main.cpp ./core/editor.cpp ./core/editor.h ./data/gapbuffer.cpp ./data/gapbuffer.h data/editmem.cpp data/editmem.h core/actions.cpp core/actions.h)
+
+add_executable(cxedit ${SOURCES})
